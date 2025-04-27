@@ -21,11 +21,6 @@ public class HomeController {
         this.playerStatsService = playerStatsService;
     }
 
-    @GetMapping({ "/" })
-    public String showLoginPage() {
-        return "Hello";
-    }
-
     @GetMapping("/getStat")
     public List<PlayerStats> getStat(@RequestParam TeamNames team1, @RequestParam TeamNames team2,
             @RequestParam Grounds ground, @RequestParam PlayingStyle playingStyle) {
